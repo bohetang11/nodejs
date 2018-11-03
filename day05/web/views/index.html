@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/semantic/dist/semantic.min.css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- 注意：semantic.min.js 依赖于 Jquery -->
+    <script src="/semantic/dist/semantic.min.js"></script>
+    <!-- http:127.0.0.1:3001/semantic/dist/ -->
+    <script src="/node_modules/art-template/lib/template-web.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <h1>英雄列表</h1>
+    <button class="ui primary button">添加英雄</button>
+    <table class="ui celled striped blue table">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>英雄名称</th>
+                <th>性别</th>
+                <th>创建时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="ui ribbon label">删除</div>
+                    1
+                </td>
+                <td>zs</td>
+                <td>男</td>
+                <td>2018-12-21 12:12:12</td>
+                <td>
+                    <a href="javascript:;">编辑</a>
+                    <a href="javascript:;">删除</a>
+                </td>
+            </tr> 
+        </tbody>
+        
+    </table>
+</body>
+
+</html>
