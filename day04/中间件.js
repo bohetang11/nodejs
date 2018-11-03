@@ -16,9 +16,8 @@ app.use((req,res,next)=>{
         let obj=querystring.parse(datastr)
         console.log(obj)
         req.body=obj
-    })
-    
-    next()
+        next()
+    }) 
 })
 
 app.get('/',(req,res)=>{
