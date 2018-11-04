@@ -26,7 +26,7 @@ app.get('/',(req,res)=>{
 
 //获取所有英雄列表
 app.get('/getallhero',(req,res)=>{
-    const sql='select * from heros'
+    const sql='select * from heros order by id'
     conn.query(sql,(err,result)=>{
         if(err) return res.status(500).send({status:500,msg:err.message,data:null})
         res.send({status:200,msg:'ok',data:result})
