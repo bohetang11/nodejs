@@ -1,6 +1,12 @@
 const express = require('express')
 const app = express()
+const session=require('express-session')
 
+app.use(session({
+    secret: 'bohetang',
+    resave: false,
+    saveUninitialized: false,
+  }))
 
 //模板初始化
 app.set('view engine', 'ejs')
@@ -16,6 +22,10 @@ app.use(indexRouter)
 //导入用户功能的路由模块
 const userRouter=require('./router/user.js')
 app.use(userRouter)
+
+//导入文章的路由模块
+const articleRouter=require('./router/article.js')
+app.use(articleRouter)
 
 
 app.listen(1000, () => {

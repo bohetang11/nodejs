@@ -1,8 +1,9 @@
 const express = require('express')
 const router=express.Router()
 
-router.get('/', (req, res) => {
-    res.render('index.ejs', {})
-})
+//导入 用户相关的 处理函数模块
+const cont=require('../control/index.js')
+
+router.get('/', cont.handleIndexGet)
 
 module.exports=router
