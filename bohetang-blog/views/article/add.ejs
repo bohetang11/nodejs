@@ -8,7 +8,7 @@
         <hr>
         <form id="form">
           <!-- 在进入文章添加页面的一瞬间，就立即把 文章的 作者Id，保存到 一个隐藏域中，防止 session 失效的问题 -->
-          <input type="hidden" name="authorId" value="<%= user.id %>">
+          <input type="hidden" name="author_id" value="<%= user.id %>">
           <div class="form-group">
             <label>文章标题：</label>
             <input type="text" name="title" class="form-control" required>
@@ -37,8 +37,8 @@
                       data: $('form').serialize(),
                       success: function(res){
                           if(res.status==200){
-                              console.log(res)
-                              location.href='/article/info'
+                            // console.log(res)
+                              location.href='/article/info/'+res.insertId
                           }
                       }
                   })
